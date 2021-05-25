@@ -43,7 +43,8 @@ def get_answer() -> str:
 
 
 def show_correct_answer(user_answer: str, riddle: Riddle) -> None:
-    print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{riddle.answer}'.")
+    print(f"'{user_answer}' is wrong answer ;(. "
+          f"Correct answer was '{riddle.answer}'.")
 
 
 def show_riddle_solved():

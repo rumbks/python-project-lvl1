@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from brain_games.cli import welcome_user, get_user_name, welcome
-from brain_games.game import even as game
+import brain_games.game.even as game
 
 ROUNDS = 3
 
