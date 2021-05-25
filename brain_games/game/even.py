@@ -1,21 +1,5 @@
 from random import randint
-from typing import NamedTuple
-import prompt
-
-
-class WrongAnswer(Exception):
-    pass
-
-
-Riddle = NamedTuple("Riddle", [("question", int), ("answer", str)])
-
-
-def show_congratulations(name: str) -> None:
-    print(f"Congratulations, {name}!")
-
-
-def show_ending(name: str) -> None:
-    print(f"Let's try again, {name}!")
+from brain_games.game import Round
 
 
 def show_rules() -> None:
@@ -26,36 +10,9 @@ def is_even(number: int) -> bool:
     return number % 2 == 0
 
 
-def get_riddle() -> Riddle:
+def get_round() -> Round:
     upper_bound = 100
 
     number = randint(0, upper_bound)
     answer = "yes" if is_even(number) else "no"
-    return Riddle(question=number, answer=answer)
-
-
-def show_riddle(riddle: Riddle) -> None:
-    print(f"Question: {riddle.question}")
-
-
-def get_answer() -> str:
-    return prompt.string("Your answer: ")
-
-
-def show_correct_answer(user_answer: str, riddle: Riddle) -> None:
-    print(f"'{user_answer}' is wrong answer ;(. "
-          f"Correct answer was '{riddle.answer}'.")
-
-
-def show_riddle_solved():
-    print("Correct!")
-
-
-def play():
-    riddle = get_riddle()
-    show_riddle(riddle)
-    user_answer = get_answer()
-    if user_answer != riddle.answer:
-        show_correct_answer(user_answer, riddle)
-        raise WrongAnswer
-    show_riddle_solved()
+    return Round(question=str(number), answer=answer)

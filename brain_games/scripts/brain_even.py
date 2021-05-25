@@ -1,22 +1,10 @@
 #!/usr/bin/env python
-from brain_games.cli import welcome_user, get_user_name, welcome
-import brain_games.game.even as game
-
-ROUNDS = 3
+from brain_games.game import even as even_game
+from brain_games.scripts import show_game_cli
 
 
 def main():
-    welcome()
-    name = get_user_name()
-    welcome_user(name)
-    game.show_rules()
-    for _ in range(ROUNDS):
-        try:
-            game.play()
-        except game.WrongAnswer:
-            game.show_ending(name)
-            return
-    game.show_congratulations(name)
+    show_game_cli(even_game)
 
 
 if __name__ == '__main__':
