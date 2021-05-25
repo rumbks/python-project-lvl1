@@ -1,6 +1,6 @@
 from math import sqrt
-from random import choice, randint
-from operator import add, sub, mul
+from random import randint
+
 from brain_games.game import Round
 
 
@@ -9,7 +9,7 @@ def divides(a: int, b: int) -> bool:
 
 
 def is_prime(n) -> bool:
-    for i in range(2, int(sqrt(n))+1):
+    for i in range(2, int(sqrt(n)) + 1):
         if divides(n, i):
             return False
     return True
