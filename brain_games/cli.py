@@ -5,9 +5,6 @@ def welcome() -> None:
     print("Welcome to the Brain Games!")
 
 
-def get_user_name() -> str:
-    return prompt.string('May I have your name? ')
-
-
-def welcome_user(name: str) -> None:
+def welcome_user() -> None:
+    name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
