@@ -1,6 +1,6 @@
 from random import randint
 
-from brain_games.game import Round
+from brain_games.games import Round
 
 
 def find_gcd(a: int, b: int):

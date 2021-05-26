@@ -1,6 +1,6 @@
 from random import choice, randint
 from operator import add, sub, mul
-from brain_games.game import Round
+from brain_games.games import Round
 
 
 def show_rules() -> None:

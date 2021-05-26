@@ -1,7 +1,7 @@
 from random import randint
 from typing import List
 
-from brain_games.game import Round
+from brain_games.games import Round
 
 
 def show_rules() -> None:

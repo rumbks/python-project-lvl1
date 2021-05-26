@@ -1,7 +1,7 @@
 from math import sqrt
 from random import randint
 
-from brain_games.game import Round
+from brain_games.games import Round
 
 
 def divides(a: int, b: int) -> bool:
