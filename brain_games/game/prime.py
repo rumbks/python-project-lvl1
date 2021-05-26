@@ -20,9 +20,9 @@ def show_rules() -> None:
 
 
 def get_round() -> Round:
-    upper_bound = 100
+    UPPER_BOUND = 100
 
-    number = randint(2, upper_bound)
+    number = randint(2, UPPER_BOUND)
     answer = "yes" if is_prime(number) else "no"
 
     return Round(question=str(number), answer=answer)

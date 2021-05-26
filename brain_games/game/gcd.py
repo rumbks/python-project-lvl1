@@ -17,9 +17,9 @@ def show_rules() -> None:
 
 
 def get_round() -> Round:
-    upper_bound = 100
+    UPPER_BOUND = 100
 
-    left_number, right_number = randint(1, upper_bound), randint(1, upper_bound)
+    left_number, right_number = randint(1, UPPER_BOUND), randint(1, UPPER_BOUND)
 
     question = " ".join(map(str, (left_number, right_number)))
     gcd = find_gcd(left_number, right_number)

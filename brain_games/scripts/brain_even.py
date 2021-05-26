@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 from brain_games.game import even as even_game
-from brain_games.scripts import show_game_cli
+from brain_games.engine import play
 
 
 def main():
-    show_game_cli(even_game)
+    play(even_game)
 
 
 if __name__ == '__main__':

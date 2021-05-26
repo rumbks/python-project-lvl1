@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 from brain_games.game import prime as prime_game
-from brain_games.scripts import show_game_cli
+from brain_games.engine import play
 
 
 def main():
-    show_game_cli(prime_game)
+    play(prime_game)
 
 
 if __name__ == '__main__':

@@ -8,13 +8,13 @@ def show_rules() -> None:
 
 
 def get_round() -> Round:
-    upper_bound = 100
+    UPPER_BOUND = 100
 
-    operations = {"+": add, "-": sub, "*": mul}
-    left_number, right_number = randint(1, upper_bound), randint(1, upper_bound)
-    operation_symbol = choice(tuple(operations.keys()))
+    OPERATIONS = {"+": add, "-": sub, "*": mul}
+    left_number, right_number = randint(1, UPPER_BOUND), randint(1, UPPER_BOUND)
+    operation_symbol = choice(tuple(OPERATIONS.keys()))
 
     question = " ".join(map(str, (left_number, operation_symbol, right_number)))
-    result = operations[operation_symbol](left_number, right_number)
+    result = OPERATIONS[operation_symbol](left_number, right_number)
 
     return Round(question=question, answer=str(result))

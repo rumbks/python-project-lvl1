@@ -28,15 +28,15 @@ def get_representation_with_hidden_item(
 
 
 def get_round() -> Round:
-    initial_term_upper_bound = 30
-    initial_term = randint(0, initial_term_upper_bound)
+    INITIAL_TERM_UPPER_BOUND = 30
+    initial_term = randint(0, INITIAL_TERM_UPPER_BOUND)
 
-    length_lower_bound, length_upper_bound = 5, 15
-    progression_length = randint(length_lower_bound, length_upper_bound)
+    LENGTH_LOWER_BOUND, LENGTH_UPPER_BOUND = 5, 15
+    progression_length = randint(LENGTH_LOWER_BOUND, LENGTH_UPPER_BOUND)
 
-    difference_lower_bound, difference_upper_bound = 1, 10
+    DIFFERENCE_LOWER_BOUND, DIFFERENCE_UPPER_BOUND = 1, 10
     progression_difference = randint(
-        difference_lower_bound, difference_upper_bound
+        DIFFERENCE_LOWER_BOUND, DIFFERENCE_UPPER_BOUND
     )
 
     progression = get_progression(
